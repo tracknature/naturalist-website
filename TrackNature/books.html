@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Books on wildlife tracking, wolves, bears, and natural history by Dr. Jim Halfpenny. Field guides, tracking manuals, and Yellowstone wildlife resources.">
+    <title>Books - A Naturalist's World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="books.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>A Naturalist's World</h1>
+                    <p class="tagline">Dr. Jim Halfpenny</p>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="books.html" class="active">Books</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Books & Publications</h1>
+            <p>Expert guides on wildlife tracking, carnivore ecology, and natural history</p>
+        </div>
+    </section>
+
+    <!-- Book Categories Filter -->
+    <section class="book-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Books</button>
+                <button class="filter-btn" data-category="wolves">Wolves</button>
+                <button class="filter-btn" data-category="bears">Bears</button>
+                <button class="filter-btn" data-category="tracking">Tracking</button>
+                <button class="filter-btn" data-category="field-guides">Field Guides</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Grid -->
+    <section class="books-section">
+        <div class="container">
+
+            <!-- Featured/New Releases -->
+            <div class="books-category">
+                <h2>New & Featured</h2>
+                <div class="books-grid">
+
+                    <div class="book-card" data-category="wolves" id="wolves-30">
+                        <div class="book-image">
+                            <img src="images/books/wolves-30-years.jpg" alt="30 Years of Yellowstone Wolves">
+                            <span class="badge badge-new">New</span>
+                        </div>
+                        <div class="book-details">
+                            <h3>30 Years of Yellowstone Wolves</h3>
+                            <p class="book-author">By Leo Leckie, Jim Halfpenny, and Shauna Baron</p>
+                            <p class="book-description">Celebrate 30 years of wolf restoration! Learn life histories and
+                                genealogy of 22 famous and favorite wolves and 18 current alphas. Ancestries and stories
+                                that bring the Yellowstone wolf saga to life.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$24.95</span>
+                                <button class="btn btn-primary add-to-cart" data-product-id="wolves-30">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card" data-category="wolves">
+                        <div class="book-image">
+                            <img src="images/books/wolf-chart-25.jpg"
+                                alt="Charting Yellowstone Wolves: 25th Anniversary">
+                        </div>
+                        <div class="book-details">
+                            <h3>Charting Yellowstone Wolves: 25th Anniversary</h3>
+                            <p class="book-author">By Jim Halfpenny</p>
+                            <p class="book-description">The first 25 years of wolf restoration in the Greater
+                                Yellowstone Ecosystem. Includes all wolf charts since the beginning and biographies for
+                                radio collared wolves, plus instructions on accessing wolf genealogy.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$24.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Wolves -->
+            <div class="books-category">
+                <h2>Wolves</h2>
+                <div class="books-grid">
+
+                    <div class="book-card" data-category="wolves">
+                        <div class="book-image">
+                            <img src="images/books/wolves-in-wild.jpg" alt="Yellowstone Wolves in the Wild">
+                        </div>
+                        <div class="book-details">
+                            <h3>Yellowstone Wolves in the Wild</h3>
+                            <p class="book-author">By Jim Halfpenny</p>
+                            <p class="book-description">Everything you wanted to know about the wolves of Yellowstone!
+                                Comprehensive coverage of wolf restoration, pack dynamics, and behavior in the Greater
+                                Yellowstone Ecosystem.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$19.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card" data-category="wolves">
+                        <div class="book-image">
+                            <img src="images/books/discovering-wolves.jpg" alt="Discovering Yellowstone Wolves">
+                        </div>
+                        <div class="book-details">
+                            <h3>Discovering Yellowstone Wolves</h3>
+                            <p class="book-author">By Jim Halfpenny and Diann Thompson</p>
+                            <p class="book-description">Historic first edition documenting wolf restoration. Pictures of
+                                original wolves, their pack history in Canada, and details of the first 1.5 years. A
+                                must-have historical glimpse.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$19.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bears -->
+            <div class="books-category">
+                <h2>Bears</h2>
+                <div class="books-grid">
+
+                    <div class="book-card" data-category="bears" id="bears">
+                        <div class="book-image">
+                            <img src="images/books/bears-in-wild.jpg" alt="Yellowstone Bears in the Wild">
+                        </div>
+                        <div class="book-details">
+                            <h3>Yellowstone Bears in the Wild</h3>
+                            <p class="book-author">By Jim Halfpenny</p>
+                            <p class="book-description">The comprehensive portrait of grizzly and black bears in the
+                                Greater Yellowstone Ecosystem. Includes cutting-edge research on bear biology, ecology,
+                                denning, hibernation, and responses to ecological changes.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$19.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card" data-category="bears field-guides">
+                        <div class="book-image">
+                            <img src="images/books/rare-mammal-moments.jpg" alt="Rare Mammal Moments">
+                        </div>
+                        <div class="book-details">
+                            <h3>Rare Mammal Moments of the Greater Yellowstone Ecosystem</h3>
+                            <p class="book-author">By Jim Halfpenny</p>
+                            <p class="book-description">The rarest biological, behavioral, and ecological events of the
+                                secret lives of mammals captured by the photographer. Stunning documentation of moments
+                                few ever witness.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$29.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tracking & Field Guides -->
+            <div class="books-category">
+                <h2>Tracking & Identification</h2>
+                <div class="books-grid">
+
+                    <div class="book-card" data-category="tracking" id="tracking-basics">
+                        <div class="book-image">
+                            <img src="images/books/tracking-wolves.jpg" alt="Tracking Wolves: The Basics">
+                        </div>
+                        <div class="book-details">
+                            <h3>Tracking Wolves: The Basics</h3>
+                            <p class="book-author">By Jim Halfpenny and Tracy Furman</p>
+                            <p class="book-description">Essential guide to understanding wolf footprints, trails, and
+                                sign. Find wolves by tracks, urine, scat, and carcasses. Includes comparative
+                                information for domestic dogs, coyotes, and other carnivores.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$9.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card" data-category="tracking">
+                        <div class="book-image">
+                            <img src="images/books/track-plates.jpg" alt="Track Plates for Mammals">
+                        </div>
+                        <div class="book-details">
+                            <h3>Track Plates for Mammals</h3>
+                            <p class="book-author">By Jim Halfpenny, Meghan Walla-Murphy, Elizabeth Rogers, and David
+                                Tiller</p>
+                            <p class="book-description">A "How-To-Manual" and aid to footprint identification. Get
+                                tracks anywhere! Ingenious devices allow tracking where natural substrates don't permit
+                                it. Used for finding rare species and non-invasive censusing.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$19.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card" data-category="tracking field-guides">
+                        <div class="book-image">
+                            <img src="images/books/scats-tracks-na.jpg" alt="Scats and Tracks of North America">
+                        </div>
+                        <div class="book-details">
+                            <h3>Scats and Tracks of North America</h3>
+                            <p class="book-author">By Jim Halfpenny, illustrated by Todd Tealander</p>
+                            <p class="book-description">Coast-to-coast guide to tracking what critters went before you.
+                                Nearly 150 species of amphibians, reptiles, birds, and mammals. Easy reference
+                                descriptions, measurements, and illustrations.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$16.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card" data-category="tracking">
+                        <div class="book-image">
+                            <img src="images/books/tracking-cougars.jpg" alt="Tracking Cougars">
+                        </div>
+                        <div class="book-details">
+                            <h3>Tracking Cougars</h3>
+                            <p class="book-author">By Jim Halfpenny</p>
+                            <p class="book-description">Reprint of the original guide to identifying cougar footprints
+                                and distinguishing them from dogs and other animals. Covers footprints, gait, trails,
+                                scat, scent marking, kills, and burials.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$14.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card" data-category="tracking">
+                        <div class="book-image">
+                            <img src="images/books/tracking-canids.jpg" alt="Tracking Canids">
+                        </div>
+                        <div class="book-details">
+                            <h3>Tracking Canids</h3>
+                            <p class="book-author">By Jim Halfpenny</p>
+                            <p class="book-description">For the hardcore tracker who wishes to study tracks from members
+                                of the wolf family in great detail: wolves, coyotes, foxes, and dogs. Advanced
+                                identification techniques.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$24.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card" data-category="tracking">
+                        <div class="book-image">
+                            <img src="images/books/tsi.jpg" alt="Track Scene Investigation">
+                        </div>
+                        <div class="book-details">
+                            <h3>Track Scene Investigation: Forensic Wildlife Tracking</h3>
+                            <p class="book-author">By Jim Halfpenny</p>
+                            <p class="book-description">44 case analyses spanning investigations into rare and
+                                endangered species, animal depredation, and cougar, wolverine, and lynx sightings.
+                                Forensic tracking techniques applied to real-world scenarios.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$29.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Halfpenny Tracks Series -->
+            <div class="books-category">
+                <h2>Halfpenny Tracks Series</h2>
+                <p class="category-description">Books collecting and archiving tracking knowledge from Jim Halfpenny's
+                    lifetime of experience, colleagues, and students. Resources for those desiring deeper knowledge.</p>
+                <div class="books-grid">
+
+                    <div class="book-card" data-category="tracking">
+                        <div class="book-image">
+                            <img src="images/books/halfpenny-tracks-1.jpg" alt="Halfpenny Tracks Volume 1">
+                        </div>
+                        <div class="book-details">
+                            <h3>A Field Guide to Mammal Tracking in North America</h3>
+                            <p class="book-author">By Jim Halfpenny</p>
+                            <p class="book-description">Reprint of Dr. Halfpenny's classic book explaining clues,
+                                measurements, gaits, trail patterns, and changes in patterns. "Considered the best text
+                                of its kind ever published" - New York Times.</p>
+                            <div class="book-footer">
+                                <span class="book-price">$24.95</span>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Looking for Something Specific?</h2>
+            <p>Can't find what you're looking for? We have many more resources available including field guides, charts,
+                and educational materials.</p>
+            <a href="resources.html" class="btn btn-secondary">Browse Resources</a>
+            <a href="index.html#contact" class="btn btn-outline">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>A Naturalist's World</h4>
+                    <p>Educational programs and materials about natural history and ecology since 1997.</p>
+                    <p>Authorized Permittee of Yellowstone National Park</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resources.html#charts">Wolf Charts</a></li>
+                        <li><a href="resources.html#apps">Mobile Apps</a></li>
+                        <li><a href="resources.html#casts">Footprint Casts</a></li>
+                        <li><a href="resources.html#field-guides">Field Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <p>Email: <a href="mailto:trackdoctor@tracknature.com">trackdoctor@tracknature.com</a></p>
+                    <p>Phone: (406) 223-1579</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1997-2026 A Naturalist's World. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="books.js"></script>
+</body>
+
+</html>
