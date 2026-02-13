@@ -10,8 +10,8 @@ if (mobileMenuToggle) {
         mobileMenuToggle.classList.toggle('active');
     });
 
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-menu a');
+    // Close menu when clicking on a non-dropdown link
+    const navLinks = document.querySelectorAll('.nav-menu > li:not(.dropdown) > a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
@@ -19,6 +19,42 @@ if (mobileMenuToggle) {
         });
     });
 }
+
+// Mobile Dropdown Toggle (click to open on mobile)
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown => {
+    const dropdownLink = dropdown.querySelector('> a');
+
+    dropdownLink.addEventListener('click', (e) => {
+        // Only prevent default and toggle on mobile
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+
+            // Close other dropdowns
+            dropdowns.forEach(other => {
+                if (other !== dropdown) {
+                    other.classList.remove('active');
+                }
+            });
+
+            // Toggle this dropdown
+            dropdown.classList.toggle('active');
+        }
+        // On desktop, let the link work normally (hover handles dropdown)
+    });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+        if (!e.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    }
+});
 
 // Smooth Scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
