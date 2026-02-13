@@ -142,6 +142,11 @@ img {
     list-style: none;
     gap: 2rem;
     align-items: center;
+    position: relative;
+}
+
+.nav-menu>li {
+    position: relative;
 }
 
 .nav-menu a {
@@ -150,11 +155,75 @@ img {
     font-size: 1rem;
     padding: 0.5rem 0;
     border-bottom: 2px solid transparent;
+    display: block;
+}
+
+.nav-menu>li>a {
+    padding: 0.5rem 0.75rem;
 }
 
 .nav-menu a:hover {
     color: var(--primary-color);
     border-bottom-color: var(--primary-color);
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    padding: 0.75rem 1.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-bottom: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+    border-bottom: none;
+}
+
+/* Dropdown indicator (arrow) */
+.dropdown>a::after {
+    content: '▼';
+    font-size: 0.7rem;
+    margin-left: 0.4rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover>a::after {
+    transform: rotate(180deg);
 }
 
 .mobile-menu-toggle {
@@ -268,6 +337,98 @@ img {
 }
 
 /* ===================================
+   UPCOMING CLASSES BANNER
+   =================================== */
+
+.upcoming-classes-banner {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 2rem 0;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.upcoming-classes-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.banner-icon {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.banner-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.banner-text h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.classes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.upcoming-class-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.class-date {
+    font-weight: 700;
+    color: var(--secondary-color);
+    white-space: nowrap;
+}
+
+.class-separator {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+}
+
+.class-name {
+    color: white;
+    font-weight: 500;
+}
+
+.class-link {
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.class-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.banner-cta {
+    background-color: white;
+    color: var(--primary-color);
+    border-color: white;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.banner-cta:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+/* ===================================
    ABOUT SECTION
    =================================== */
 
@@ -278,7 +439,7 @@ img {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 45% 55%;
     gap: var(--spacing-lg);
     align-items: center;
 }
@@ -286,6 +447,10 @@ img {
 .about-image img {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 650px;
 }
 
 .about-content h2 {
@@ -572,6 +737,7 @@ img {
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         display: none;
+        gap: 0;
     }
 
     .nav-menu.active {
@@ -582,6 +748,38 @@ img {
         width: 100%;
         text-align: center;
         padding: 0.5rem 0;
+    }
+
+    /* Mobile Dropdown Styles */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background-color: var(--bg-light);
+        margin-top: 0.5rem;
+        border-radius: 4px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .dropdown.active .dropdown-menu {
+        max-height: 500px;
+    }
+
+    .dropdown>a::after {
+        content: '▼';
+    }
+
+    .dropdown.active>a::after {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 
     /* Hero */
@@ -605,6 +803,40 @@ img {
     .hero-buttons .btn {
         width: 100%;
         max-width: 300px;
+    }
+
+    /* Upcoming Classes Banner */
+    .upcoming-classes-banner {
+        padding: 1.5rem 0;
+    }
+
+    .upcoming-classes-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .banner-icon {
+        font-size: 2.5rem;
+    }
+
+    .banner-text {
+        width: 100%;
+    }
+
+    .upcoming-class-item {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+    }
+
+    .class-separator {
+        display: none;
+    }
+
+    .banner-cta {
+        width: 100%;
+        margin-left: 0;
     }
 
     /* About */
